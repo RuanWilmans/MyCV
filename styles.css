@@ -1,0 +1,119 @@
+/*
+File: styles.css
+Purpose:
+  Styling for the simple CV page (index.html).
+Author: Ruan Wilmans
+Notes:
+  - Minimal design with readable defaults.
+  - Colors use CSS variables so tweaks are easy.
+  - No frameworks to keep deployment simple.
+*/
+
+/* ===== Theme tokens ===== */
+:root {
+  --bg: #0f1115;
+  --card: #161a22;
+  --text: #e7e7e7;
+  --muted: #a9b0be;
+  --accent: #f59e0b;
+  --maxw: 900px;
+}
+
+/* ===== Base resets ===== */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+header.wrap {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #202534;
+}
+
+main section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* ===== Typography ===== */
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+.meta {
+  color: var(--muted);
+  margin: 0.2rem 0 -0.2rem;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+}
+
+/* ===== Lists ===== */
+.list {
+  padding-left: 1.25rem;
+}
+
+.pills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pills li {
+  background: #1d2330;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+}
+
+/* ===== Cards / items ===== */
+.item {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 0;
+}
+
+/* ===== Optional avatar (only if you add me.jpg) ===== */
+.avatar {
+  display: block;
+  margin-top: 0.75rem;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+}

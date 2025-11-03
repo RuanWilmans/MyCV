@@ -1,0 +1,138 @@
+<!--
+File: index.html
+Purpose:
+  Personal one-page CV site for HyperionDev Task 15-004 (static websites).
+  Kept simple and readable so deployment to GitHub Pages is easy.
+Author: Ruan Wilmans
+How to use:
+  1) Keep this file as index.html at the repo root.
+  2) Make sure styles.css sits next to it.
+  3) Enable GitHub Pages on the repo (Settings → Pages → Branch: main).
+Notes:
+  - Plain HTML + CSS only (no build tools).
+  - Light comments are included to explain the structure for the reviewer.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Ruan Wilmans — CV</title>
+
+  <!-- Link to the single CSS file for this page -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Basic SEO + sharing -->
+  <meta name="description"
+        content="Simple CV page for Ruan Wilmans — student-friendly layout with a short bio, skills, education, and experience." />
+</head>
+
+<body>
+  <!-- ========== Header ========== -->
+  <header class="wrap" aria-labelledby="site-title">
+    <h1 id="site-title">Ruan Wilmans</h1>
+    <p class="tagline">Junior Software Engineer &amp; Account Manager</p>
+
+    <!-- Optional profile image (put me.jpg next to this file if you want to show it)
+         <img src="me.jpg" alt="Portrait of Ruan Wilmans" class="avatar" width="120" height="120" />
+    -->
+  </header>
+
+  <!-- ========== Main content ========== -->
+  <main class="wrap" id="content">
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>
+        I’m a South African student focusing on practical skills in Python and basic web development.
+        I like keeping things simple, shipping small projects, and improving them as I go.
+      </p>
+      <p>
+        I also handle telecom account management tasks. That work taught me to be organised,
+        data-aware, and clear when I explain changes or results.
+      </p>
+      <p>
+        Short-term goals: finish my software engineering course, keep building projects,
+        and contribute to a team where I can learn fast.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <ul class="list">
+        <li>Email: <a href="mailto:ruanwilmanss@gmail.com">ruanwilmanss@gmail.com</a></li>
+        <li>Phone: 071&nbsp;199&nbsp;9556</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noopener">Add your link</a></li>
+        <li>GitHub: <a href="https://github.com/" target="_blank" rel="noopener">Add your link</a></li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <ul class="pills">
+        <li>Python basics</li>
+        <li>HTML &amp; CSS</li>
+        <li>Git &amp; GitHub</li>
+        <li>Django (starter)</li>
+        <li>Problem solving</li>
+        <li>Team communication</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <ul class="list">
+        <li>HyperionDev Software Engineering Bootcamp (in progress)</li>
+        <li>University of Cape Town — 2 years of study</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+
+      <article class="item" aria-labelledby="exp-saftel">
+        <h3 id="exp-saftel">Saftel Communications — Account Manager</h3>
+        <p class="meta">2025 — Present</p>
+        <p>
+          Manage vendor/client relationships, push lists, and traffic reporting.
+          Work with rates and margins while keeping communication straightforward.
+        </p>
+      </article>
+
+      <article class="item" aria-labelledby="exp-easicall">
+        <h3 id="exp-easicall">Easicall — Junior Developer / IT Support</h3>
+        <p class="meta">2025</p>
+        <p>
+          Assisted with Windows Server setup and small internal tools.
+          Used simple scripts and careful step-by-step changes to avoid downtime.
+        </p>
+      </article>
+    </section>
+
+    <!-- Projects (simple list so it stays lightweight) -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <ul class="list">
+        <li>Static site portfolio (this page)</li>
+        <li>Simple Flask practice app for internal tracking</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="wrap footer" aria-label="Site footer">
+    <p>© <span id="year"></span> Ruan Wilmans</p>
+  </footer>
+
+  <!-- Tiny helper script just to keep the year current -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
